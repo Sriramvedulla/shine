@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shine Clinic</title>
+    <style>
+      table {
+        border: 2px solid #fff;
+        width: 40%;
+        border-radius: 6px;
+        border-spacing: 2px;
+        padding: 4px;
+      }
+      td {
+        border: 1px solid #fff;
+        background-color: #e6e6e6;
+        border-radius: 6px;
+        font-size: 15px;
+        padding: 5px;
+        color: #6600ff;
+        border-spacing: 5px;
+      }
+      #image {
+        width: 100%;
+        height: 100%;
+        box-shadow: 0px 2px 4px;
+      }
+      .container {
+        display: flex;
+      }
+      h2 {
+        text-align: center;
+        background-color: #fff;
+        color: #c21807;
+        border-radius: 6px;
+        font-family: Georgia;
+        font-size: 20px;
+      }
+      .right {
+        padding: 10px;
+        background-color: #1aa3ff;
+        width: 60%;
+        float: right;
+      }
+      #personal,
+      #payment,
+      #admission {
+        color: #c21807;
+      }
+      #cnumber,
+      #cvvnumber,
+      #pname,
+      #phno,
+      #email,
+      #age {
+        width: 99%;
+      }
+      #dateofadmission,
+      #adtype,
+      #adfor {
+        width: 99%;
+      }
+      #submit {
+        color: #c21807;
+        border: 1px solid black;
+        border-radius: 6px;
+        margin-top: 20px;
+        margin-left: 25px;
+        padding: 5px;
+        font-family: Georgia;
+        font-weight: bold;
+      }
+      #submit:hover {
+        color: #fff;
+        background-color: #c21807;
+      }
+    </style>
+  </head>
+  <body class="container">
+    <div>
+      <img src="./images/hospital.jpg" id="image" />
+    </div>
+    <form action="" class="right">
+      <h2>Shine Clinic</h2>
+      <table>
+        <tr>
+          <td>
+            <a href="#admission" id="admission_info">Admission-info</a>
+          </td>
+          <td>
+            <a href="#personal" id="personal_info">Personal-info</a>
+          </td>
+          <td>
+            <a href="#payment" id="payment_info">Paymnet-info</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" id="admission">Admission Information</td>
+        </tr>
+        <tr>
+          <td>
+            <label for="dateofadmission">Date of admission:</label><br />
+            <input type="date" id="dateofadmission" />
+          </td>
+          <td>
+            <label for="adtype">Select the admission type</label><br />
+            <select id="adtype">
+              <option value="Select">Select</option>
+              <option value="new admission">New Admission</option>
+              <option value="already have">Already Have</option>
+            </select>
+          </td>
+          <td>
+            <label for="adfor">Admission For</label><br />
+            <select id="adfor">
+              <option value="select">Select</option>
+              <option value="ear">Ear</option>
+              <option value="nose">Nose</option>
+              <option value="throat">Throat</option>
+              <option value="general checkup">General Checkup</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" id="select">
+            **Select if you have any of the following below.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="cold" name="health" />
+            <label for="cold">Cold</label>
+          </td>
+          <td>
+            <input type="checkbox" id="fever" name="health" />
+            <label for="fever">Fever</label>
+          </td>
+          <td>
+            <input type="checkbox" id="cough" name="health" />
+            <label for="cough">Cough</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="diapedesis" name="health" />
+            <label for="diapedesis">Diapedesis</label>
+          </td>
+          <td>
+            <input type="checkbox" id="blood pressure" name="health" />
+            <label for="blood pressure">Blood Pressure</label>
+          </td>
+          <td>
+            <input type="checkbox" id="heavy surgery" name="health" />
+            <label for="heavy surgery">Heavy Surgery</label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" id="personal">Personal Information</td>
+        </tr>
+        <tr>
+          <td>
+            <label for="pname">Patient Name</label>
+          </td>
+          <td colspan="2">
+            <input
+              type="text"
+              id="pname"
+              placeholder="Enter the patient name"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="phno">Phone Number</label>
+          </td>
+          <td colspan="2">
+            <input type="tel" id="phno" placeholder="Enter the phone number" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="email">Email ID</label>
+          </td>
+          <td colspan="2">
+            <input type="email" id="email" placeholder="Enter the email id" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="age">Age</label>
+          </td>
+          <td colspan="2">
+            <input type="text" id="age" placeholder="Enter the age" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="address">Address</label>
+          </td>
+          <td colspan="2">
+            <textarea
+              id="address"
+              cols="80"
+              rows="4"
+              placeholder="Enter the address"
+            ></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" id="payment">Payment Information</td>
+        </tr>
+        <tr>
+          <td>
+            <label for="paytype">Select the payment type:</label>
+          </td>
+          <td>
+            <input type="radio" id="card" name="ptype" />
+            <label for="card">Card</label>
+          </td>
+          <td>
+            <input type="radio" id="cash" name="ptype" />
+            <label for="cash">Cash</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="cnumber">Card Number</label>
+          </td>
+          <td colspan="2">
+            <input
+              type="text"
+              id="cnumber"
+              placeholder="Enter the card number"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="cvvnumber">Cvv Number</label>
+          </td>
+          <td colspan="2">
+            <input
+              type="text"
+              id="cvvnumber"
+              placeholder="Enter the cvv number"
+            />
+          </td>
+        </tr>
+      </table>
+      <input type="button" id="submit" value="CONFIRM" />
+    </form>
+  </body>
+</html>
